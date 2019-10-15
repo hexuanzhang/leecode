@@ -1,9 +1,10 @@
 /*
- * @Description:
+ * @Description: 给定一个字符串 string 和一个包含 '.' 和 '*' 的字符规则 pattern，实现一个判断 s 和 p 是否匹配函数
+ * @Address: https://leetcode.com/problems/regular-expression-matching/ | https://leetcode-cn.com/problems/regular-expression-matching/
  * @Author: hexuan.zhang
  * @Date: 2019-10-14 14:30:25
  * @Last Modified by: hexuan.zhang@pingxx.com
- * @Last Modified time: 2019-10-15 22:40:27
+ * @Last Modified time: 2019-10-15 23:01:19
  */
 
 /**
