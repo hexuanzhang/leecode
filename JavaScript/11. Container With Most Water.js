@@ -1,13 +1,14 @@
 /*
- * @Description:
+ * @Description: 给定 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
+ * @Address: https://leetcode.com/problems/container-with-most-water/ | https://leetcode-cn.com/problems/container-with-most-water/
  * @Author: hexuan.zhang
  * @Date: 2019-10-14 17:51:24
  * @Last Modified by: hexuan.zhang@pingxx.com
- * @Last Modified time: 2019-10-15 22:47:53
+ * @Last Modified time: 2019-10-15 22:52:21
  */
 
 /**
- * 双重循环 时间复杂度：O(n^2)、空间复杂度：O(1)
+ * 双重循环 时间复杂度：O(n^2)、空间复杂度：O11. Container With Most Water(1)
  *
  * @param {number[]} height
  * @return {number}
