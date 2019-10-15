@@ -3,7 +3,7 @@
  * @Author: hexuan.zhang@pingxx.com
  * @Date: 2019-10-15 22:32:55
  * @Last Modified by: hexuan.zhang@pingxx.com
- * @Last Modified time: 2019-10-15 22:40:27
+ * @Last Modified time: 2019-10-15 22:46:45
  */
 
 /**
@@ -66,6 +66,41 @@ const intToRoman = (num) => {
         default:
             result += 'I'.repeat(num);
     }
+
+    return result;
+}
+
+/**
+ * 精简版
+ *
+ * @param {number} num
+ * @return {string}
+ */
+const intToRoman = (num) => {
+    const ROMAN_MAP = {
+        'M': 1000,
+        'CM': 900,
+        'D': 500,
+        'CD': 400,
+        'C': 100,
+        'XC': 90,
+        'L': 50,
+        'XL': 40,
+        'X': 10,
+        'IX': 9,
+        'V': 5,
+        'IV': 4,
+        'I': 1,
+    };
+
+    let result = '';
+    Object.keys(ROMAN_MAP).forEach(key => {
+        const weight = ROMAN_MAP[key],
+            count = Math.trunc(num / weight);
+
+        result += key.repeat(count);
+        num -= count * weight;
+    });
 
     return result;
 }
