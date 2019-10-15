@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-14 17:51:24
  * @Last Modified by: hexuan.zhang@pingxx.com
- * @Last Modified time: 2019-10-15 22:52:21
+ * @Last Modified time: 2019-10-15 22:55:16
  */
 
 /**
@@ -35,14 +35,14 @@ const maxArea = (height) => {
  * @return {number}
  */
 const maxArea = (height) => {
-    const start = 0,
-        end = height.length;
+    let start = 0,
+        end = height.length - 1;
 
     let result = 0;
     while (start < end) {
         result = Math.max((end - start) * Math.min(height[start], height[end]), result);
 
-        height[start] > height[end] ? ++end : ++start;
+        height[start] > height[end] ? --end : ++start;
     }
 
     return result;
