@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-14 14:30:25
  * @Last Modified by: hexuan.zhang@pingxx.com
- * @Last Modified time: 2019-10-15 23:01:19
+ * @Last Modified time: 2019-10-15 23:01:54
  */
 
 /**
@@ -53,5 +53,3 @@ const isMatch = (s, p) => {
 
     return dp[s.length][p.length];
 };
-
-console.log(isMatch('aaa', 'bb'));
