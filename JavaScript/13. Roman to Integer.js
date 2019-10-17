@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-16 22:53:31
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-10-16 23:48:29
+ * @Last Modified time: 2019-10-17 23:31:46
  */
 
 /**
@@ -68,6 +68,41 @@ const romanToInt = (s) => {
 
         }
     }
+
+    return result;
+}
+
+const romanToInt = (s) => {
+    const ROMAN_MAP = {
+        'M': 1000,
+        'CM': 900,
+        'D': 500,
+        'CD': 400,
+        'C': 100,
+        'XC': 90,
+        'L': 50,
+        'XL': 40,
+        'X': 10,
+        'IX': 9,
+        'V': 5,
+        'IV': 4,
+        'I': 1,
+    };
+
+    let result = 0;
+
+    /**
+     * 处理 CM、CD、XC、XL、IX、IV
+     *
+     * mathall() 有兼容性问题
+     */
+    Array.from(`${s}`.matchAll(RegExp('C[M|D]|X[L|C]|I[X|V]', 'g')), key => {
+        result += ROMAN_MAP[key[0]];
+        s = s.replace(key[0], '');
+    });
+
+    // 处理剩余情况
+    s.split('').forEach(key => result += ROMAN_MAP[key]);
 
     return result;
 }
