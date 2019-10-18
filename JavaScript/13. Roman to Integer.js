@@ -4,13 +4,46 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-16 22:53:31
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-10-17 23:31:46
+ * @Last Modified time: 2019-10-18 23:19:01
  */
 
 /**
  * @param {string} s
  * @return {number}
  */
+const romanToInt = (s) => {
+    const ROMAN_MAP = {
+        'M': 1000,
+        'D': 500,
+        'C': 100,
+        'L': 50,
+        'X': 10,
+        'V': 5,
+        'I': 1,
+    };
+
+    let result = 0,
+        prevWeight = 0;
+
+    /**
+     * 观察 CM、CD、XC、XL、IX、IV 可以发现，前者的值都比后者小，
+     * 在遍历字符串的过程中，如果发现 s[i + 1] > s[i] ，那么则是加 s[i+1] - 2 * s[i] 的值；反之，则是加 s[i] 的值
+     */
+    for (let i = 0; i < s.length; i++) {
+        const weight = ROMAN_MAP[s[i]];
+
+        if (weight > prevWeight) {
+            result += (weight - 2 * prevWeight);
+        } else {
+            result += weight;
+        }
+
+        prevWeight = weight;
+    }
+
+    return result;
+}
+
 const romanToInt = (s) => {
     const ROMAN_MAP = {
         'M': 1000,
