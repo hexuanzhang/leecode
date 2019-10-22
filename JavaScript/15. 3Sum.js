@@ -4,13 +4,15 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-19 22:56:25
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-10-19 22:58:47
+ * @Last Modified time: 2019-10-22 23:55:37
  */
 
 /**
+ *  思路：最容易想到的是三层循环，暴力破解，需要注意的是要对结果进行去重
+ *
 * @param {number[]} nums
 * @return {number[][]}
 */
 const threeSum = (nums) => {
-
+    if (nums.length < 3) return [];
 };

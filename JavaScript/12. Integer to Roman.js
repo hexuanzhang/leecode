@@ -1,10 +1,10 @@
 /*
  * @Description: 将 1 到 3999 的范围内整数转为罗马数
  * @Address: https://leetcode.com/problems/integer-to-roman/ | https://leetcode-cn.com/problems/integer-to-roman/submissions/）
- * @Author: hexuan.zhang@pingxx.com
+ * @Author: hexuan.zhang
  * @Date: 2019-10-15 22:32:55
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-10-17 23:55:27
+ * @Last Modified time: 2019-10-22 23:55:59
  */
 
 /**

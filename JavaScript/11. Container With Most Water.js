@@ -3,8 +3,8 @@
  * @Address: https://leetcode.com/problems/container-with-most-water/ | https://leetcode-cn.com/problems/container-with-most-water/
  * @Author: hexuan.zhang
  * @Date: 2019-10-14 17:51:24
- * @Last Modified by: hexuan.zhang@pingxx.com
- * @Last Modified time: 2019-10-15 22:55:16
+ * @Last Modified by: hexuan.zhang
+ * @Last Modified time: 2019-10-22 23:55:56
  */
 
 /**
