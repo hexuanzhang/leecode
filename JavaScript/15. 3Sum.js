@@ -4,15 +4,36 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-19 22:56:25
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-10-22 23:55:37
+ * @Last Modified time: 2019-10-23 00:13:14
  */
 
 /**
  *  思路：最容易想到的是三层循环，暴力破解，需要注意的是要对结果进行去重
+ *      这种方法虽然能行得通，但跑用例的时候会出现超时的情况，需要优化
  *
 * @param {number[]} nums
 * @return {number[][]}
 */
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
 const threeSum = (nums) => {
     if (nums.length < 3) return [];
+
+    const map = new Map();
+    for (let i = 0; i < nums.length - 2; i++) {
+        for (let j = i + 1; j < nums.length - 1; j++) {
+            for (let k = j + 1; k < nums.length; k++) {
+                if (Object.is(nums[i] + nums[j] + nums[k], 0)) {
+                    const group = [nums[i], nums[j], nums[k]],
+                        key = group.sort().toString();
+
+                    map.has(key) || map.set(key, group);
+                }
+            }
+        }
+    }
+
+    return Array.from(map.values());
 };
