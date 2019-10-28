@@ -3,29 +3,29 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-25 23:56:42
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-10-27 21:41:28
+ * @Last Modified time: 2019-10-28 18:49:34
  */
 
-import Sort from '../Sort';
+const { Sort } = require('../Sort');
 
 /**
  * 归并排序思路：采用分治的思想，先将待排序数组递归地拆分为两半分别排序，然后将排序结果进行归并
  */
 
-export default class MergeSort extends Sort {
-    sort() {
-        const length = this.originArray.length || 0;
+class MergeSort extends Sort {
+    sort(originArray = this.originArray) {
+        const length = originArray.length || 0;
 
-        if (length <= 1) return this.originArray;
+        if (length <= 1) return originArray;
 
         /**
          * 将原数组进行对半拆分，分别对拆分后的数组进行排序，然后归并
          */
         const mindleIndex = Math.floor(length / 2);
-        const leftArray = sort(this.originArray.slice(0, mindleIndex));
-        const rightArray = sort(this.originArray.slice(mindleIndex, length));
+        const leftArray = this.sort(originArray.slice(0, mindleIndex));
+        const rightArray = this.sort(originArray.slice(mindleIndex, length));
 
-        return merge(leftArray, rightArray);
+        return this.merge(leftArray, rightArray);
     }
 
     /**
@@ -52,3 +52,5 @@ export default class MergeSort extends Sort {
         return result;
     }
 }
+
+module.exports.MergeSort = MergeSort;
