@@ -3,15 +3,17 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-25 23:56:42
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-10-30 10:22:26
+ * @Last Modified time: 2019-10-30 11:24:52
  */
 
 const { Sort } = require('../Sort');
 
 /**
  * 归并排序思路：采用分治的思想，先将待排序数组递归地拆分为两半分别排序，然后将排序结果进行归并
+ *
+ * @class MergeSort
+ * @extends {Sort}
  */
-
 class MergeSort extends Sort {
     sort(originArray = this.originArray) {
         const length = originArray.length || 0;

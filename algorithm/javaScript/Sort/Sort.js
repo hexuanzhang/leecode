@@ -3,9 +3,14 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-27 21:08:11
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-10-28 18:43:59
+ * @Last Modified time: 2019-10-30 11:25:05
  */
 
+/**
+ *
+ *
+ * @class Sort
+ */
 class Sort {
     /**
      * @param {*} originArray 待排序的数组
