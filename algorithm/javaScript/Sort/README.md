@@ -81,8 +81,6 @@
 
 ### 复杂度图表
 
-<table id="legendTable" class="table" style="padding: 2px;" border="1" cellpadding="4"><tbody><tr><td style="text-align: center; padding: 2px; color: #286500; background-color: #55ee00;">最佳</td><td style="text-align: center; padding: 2px; color: #286500; background-color: #c8ea00;">好</td><td style="text-align: center; padding: 2px; color: #6f6e00; background-color: #ff0;">一般</td><td style="text-align: center; padding: 2px; color: #b20000; background-color: #ffc543;">不好</td><td style="text-align: center; padding: 2px; color: #dddddd; background-color: #ff5555;">糟糕</td></tr></tbody></table>
-
 #### 大-O 复杂度曲线
 
 ![](https://blog-1255677601.cossh.myqcloud.com/blog/2019-10-30-100208.jpg)
