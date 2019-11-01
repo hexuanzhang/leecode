@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-24 23:39:03
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-11-01 18:15:44
+ * @Last Modified time: 2019-11-01 18:27:30
  */
 
 /**
@@ -67,14 +67,10 @@ const letterCombinations = (digits) => {
         [9, 'wxyz']
     ]);
 
-    let result = [];
+    let result = [''];
     for (let i = 0; i < digits.length; i++) {
-        const letters = LETTER_MAP[digits[i]].split('');
-
-        result = result.reduce((acct, current) => {
-            return acct.concat(letters.map(letter => letter + current));
-        }, []);
-        console.info(result);
+        const letters = LETTER_MAP.get(+digits[i]).split('');
+        result = result.reduce((acc, current) => acc.concat(letters.map(letter => current + letter)), []);
     }
 
     return result;
