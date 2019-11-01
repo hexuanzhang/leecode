@@ -4,17 +4,13 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-19 22:56:25
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-10-31 15:30:45
+ * @Last Modified time: 2019-11-01 14:53:05
  */
 
 /**
  *  思路：最容易想到的是三层循环，暴力破解，需要注意的是要对结果进行去重
  *      这种方法虽然能行得通，但跑用例的时候会出现超时的情况，需要优化
  *
-* @param {number[]} nums
-* @return {number[][]}
-*/
-/**
  * @param {number[]} nums
  * @return {number[][]}
  */
