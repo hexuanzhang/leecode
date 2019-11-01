@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-24 23:39:03
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-11-01 18:04:00
+ * @Last Modified time: 2019-11-01 18:15:44
  */
 
 /**
@@ -46,4 +46,36 @@ const getLetterCombinationsByLevel = (preStr, level, digits) => {
 
         return result;
     }
+}
+
+/**
+ * 非递归方式实现
+*/
+const letterCombinations = (digits) => {
+    if (!digits || Object.is(digits, '')) return [];
+
+    const LETTER_MAP = new Map([
+        [0, ''],
+        [1, ''],
+        [2, 'abc'],
+        [3, 'def'],
+        [4, 'ghi'],
+        [5, 'jkl'],
+        [6, 'mno'],
+        [7, 'pqrs'],
+        [8, 'tuv'],
+        [9, 'wxyz']
+    ]);
+
+    let result = [];
+    for (let i = 0; i < digits.length; i++) {
+        const letters = LETTER_MAP[digits[i]].split('');
+
+        result = result.reduce((acct, current) => {
+            return acct.concat(letters.map(letter => letter + current));
+        }, []);
+        console.info(result);
+    }
+
+    return result;
 }
