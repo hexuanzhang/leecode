@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-11-05 20:48:57
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-11-05 23:18:57
+ * @Last Modified time: 2019-11-06 00:12:55
  */
 
 /**
@@ -18,19 +18,46 @@ const isValid = (s) => {
 
     const charArray = s.split('');
 
-    let tmp = [];
+    let stack = [];
     for (let i = 0; i < charArray.length; i++) {
         const char = charArray[i];
 
         if (PARENTHESE_MAP.keys.includes(chartArray)) {
-            tmp.push(char);
+            stack.push(char);
         } else {
-            const lastChar = tmp[tmp.length - 1];
+            const lastChar = stack[stack.length - 1];
             if (Object.is(PARENTHESE_MAP.get(lastChar), char)) {
-                tmp.pop();
+                stack.pop();
             }
         }
     }
 
-    return tmp.length < 1;
+    return stack.length < 1;
 };
+
+
+const isValid = (s) => {
+    const LEFT_PARENTHESES = ['(', '{', '['].map(chat => chat.charCodeAt(0)); // 左括号（(、{、[） 对应的 Ascll 码
+    const RIGHT_PARENTHESES = [')', '}', ']'].map(chat => chat.charCodeAt(0)); // 右括号（)、}、]）对应的 Ascll 码
+
+    let stack = [];
+    for (let index in s) {
+        const chatCode = s[index].charCodeAt(0);
+
+        if (LEFT_PARENTHESES.includes(chatCode)) {
+            stack.push(chatCode);
+        } else {
+            const lastChatCode = stack[stack.length - 1];
+
+            if (!lastChatCode) return false;
+
+            if (Object.is(LEFT_PARENTHESES.indexOf(lastChatCode), RIGHT_PARENTHESES.indexOf(chatCode))) {
+                stack.pop();
+            } else {
+                return false;
+            }
+        }
+    }
+
+    return stack.length < 1;
+}
