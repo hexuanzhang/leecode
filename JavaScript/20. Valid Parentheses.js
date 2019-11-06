@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-11-05 20:48:57
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-11-06 00:12:55
+ * @Last Modified time: 2019-11-06 11:53:59
  */
 
 /**
@@ -22,12 +22,14 @@ const isValid = (s) => {
     for (let i = 0; i < charArray.length; i++) {
         const char = charArray[i];
 
-        if (PARENTHESE_MAP.keys.includes(chartArray)) {
+        if ([...PARENTHESE_MAP.keys()].includes(chartArray)) {
             stack.push(char);
         } else {
             const lastChar = stack[stack.length - 1];
             if (Object.is(PARENTHESE_MAP.get(lastChar), char)) {
                 stack.pop();
+            } else {
+                return false;
             }
         }
     }
