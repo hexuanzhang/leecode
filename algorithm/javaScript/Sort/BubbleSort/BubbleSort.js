@@ -3,7 +3,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-10-29 18:34:36
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-10-30 11:42:33
+ * @Last Modified time: 2019-11-22 12:34:28
  */
 
 const { Sort } = require('../Sort');
@@ -16,7 +16,13 @@ const { Sort } = require('../Sort');
  * @extends {Sort}
  */
 class BubbleSort extends Sort {
+    constructor() {
+        super(...arguments);
+        this.swapCount = 0;
+    }
+
     sort() {
+        console.time('bubbleSort');
         const originArray = [...this.originArray],
             length = originArray.length;
 
@@ -27,7 +33,8 @@ class BubbleSort extends Sort {
 
             for (let j = 0; j < length; j++) {
                 if (this.compareFn(originArray[j], originArray[j + 1])) {
-                    [originArray[j], originArray[j + 1]] = [originArray[j + 1], originArray[j]];
+                    super.swap(originArray, j, j + 1);
+                    this.swapCount++;
                     swapped = true;
                 }
             }
@@ -35,6 +42,7 @@ class BubbleSort extends Sort {
             if (!swapped) break;
         }
 
+        console.timeEnd('bubbleSort');
         return originArray;
     }
 }
