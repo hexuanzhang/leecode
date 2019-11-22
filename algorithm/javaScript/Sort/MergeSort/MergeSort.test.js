@@ -1,6 +1,10 @@
 const { MergeSort } = require('./MergeSort');
+const { generateRandomArray } = require('../random');
 
-const data = [6, 5, 3, 1, 8, 7, 2, 4];
+const data = generateRandomArray(1, 10, 10);
 const mergeSort = new MergeSort(data);
 
-console.log(mergeSort.sort());
+console.group('mergeSort');
+console.log(`origin: ${data}`);
+console.log(`sorted: ${mergeSort.sort()}`);
+console.groupEnd('mergeSort');

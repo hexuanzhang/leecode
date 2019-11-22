@@ -1,7 +1,11 @@
 const { CountSort } = require('./CountSort');
+const { generateRandomArray } = require('../random');
 
-const length = 10;
-const data = Array.from({ length }, () => Math.trunc(Math.random() * 100));
+const data = generateRandomArray(1, 10, 10);
+const compareFn = (a, b) => a > b;
+const countSort = new CountSort(data, compareFn);
 
-const countSort = new CountSort(data, (a, b) => a > b);
-console.log(countSort.sort());
+console.group('countSort');
+console.log(`origin: ${data}`);
+console.log(`sorted: ${countSort.sort()}`);
+console.groupEnd('countSort');
