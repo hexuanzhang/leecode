@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-11-05 20:48:57
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-11-06 11:53:59
+ * @Last Modified time: yyyy-11-dd 18:21:10
  */
 
 /**
@@ -22,7 +22,7 @@ const isValid = (s) => {
     for (let i = 0; i < charArray.length; i++) {
         const char = charArray[i];
 
-        if ([...PARENTHESE_MAP.keys()].includes(chartArray)) {
+        if ([...PARENTHESE_MAP.keys()].includes(char)) {
             stack.push(char);
         } else {
             const lastChar = stack[stack.length - 1];
