@@ -30,5 +30,5 @@ N 个数的中值是第 N/2 个最大的数。基准的最好选择是数组的�
 
 ### 参考
 
-- [Wikipedia](<[https://zh.wikipedia.org/wiki/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F](https://zh.wikipedia.org/wiki/快速排序)>)
+- [Wikipedia](https://zh.wikipedia.org/wiki/快速排序)
 - [Youtube](https://www.youtube.com/watch?v=SLauY6PpjW4&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=34)
