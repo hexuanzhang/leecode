@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-12-02 11:37:41
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-12-02 14:25:33
+ * @Last Modified time: 2019-12-02 14:34:54
  */
 
 /**
@@ -21,13 +21,9 @@
 const removeDuplicates = (nums) => {
     if (nums.length <= 1) return nums.length;
 
-    let startIndex = 0,
-        endIndex = 1;
-
-    while (endIndex < nums.length) {
-        if (Object.is(nums[startIndex], nums[endIndex])) {
-            endIndex++
-        } else {
+    let startIndex = 0;
+    for (let endIndex = 1; endIndex < nums.length; endIndex++) {
+        if (!Object.is(nums[startIndex], nums[endIndex])) {
             /**
              * 如果 endIndex 与 startIndex 上的元素不一致且不相邻时，进行复制移位操作
              * endIndex 和 startIndex 相邻，就没必要复制移位
@@ -38,7 +34,6 @@ const removeDuplicates = (nums) => {
             }
 
             startIndex++;
-            endIndex++;
         }
     }
 
