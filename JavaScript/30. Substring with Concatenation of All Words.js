@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-12-03 16:49:30
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-12-03 18:30:07
+ * @Last Modified time: 2019-12-04 09:42:59
  */
 
 /**
@@ -12,7 +12,6 @@
  *  1. 统计 words 中每个单词出现的次数，放于 map 中
  *  2. 遍历字符串 s，每次截取长度为 n*len 的子串，判断子串中是否包含 words 中所有的单词
  *      2.1 遍历子串，截取长度为 len 的子串，判断统计 map 中是否包含该子串，如果包含则将该子串的统计次数减一，如果不包含则退出子串的遍历，进行字符串 s 的遍历
- *
  *
  * @param {string} s
  * @param {string[]} words
