@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-12-03 16:49:30
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-12-04 09:42:59
+ * @Last Modified time: 2019-12-04 10:32:47
  */
 
 /**
@@ -61,5 +61,3 @@ const findSubstring = (s, words) => {
 
     return result;
 };
-
-console.log(findSubstring('barfoothefoobarman', ["foo", "bar"]));
