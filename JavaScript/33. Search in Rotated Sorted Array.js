@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-12-09 20:54:20
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-12-09 23:06:32
+ * @Last Modified time: 2019-12-09 23:46:58
  */
 
 /**
@@ -16,10 +16,10 @@
  *      2.2 如果 target < nums[mid] < nums[0] 时，则在 [0, mid] 之间查找
  *      2.3 如果 nums[0] < target 时，也在 [0, mid] 之间查找
  *
-* @param {number[]} nums
-* @param {number} target
-* @return {number}
-*/
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
 const search = (nums, target) => {
     let lowIndex = 0,
         highIndex = nums.length - 1;
@@ -45,5 +45,51 @@ const search = (nums, target) => {
     }
 
     return -1;
-
 };
+
+
+/**
+ * 分析上面版本的判断逻辑：
+ *  1. lowIndex = middleIndex + 1 的情况有以下两种
+ *      1.1 nums[lowIndex] > nums[middleIndex] && target > nums[middleIndex] && target <= nums[highIndex]
+ *      1.2 nums[lowIndex] < nums[middleIndex] && (target > nums[middleIndex] || target < nums[lowIndex])
+ *  2. hightIndex = middleIndex - 1 的情况有
+ *      2.1 nums[lowIndex] < nums[middleIndex] && target >= nums[lowIndex] && target < nums[middleIndex]
+ *      2.2 nums[lowIndex] > nums[middleIndex] && (target >= nums[lowIndex] || target < nums[middleIndex])
+ *
+ *  3. 假设 a = nums[lowIndex] > nums[middleIndex], b = target > nums[middleIndex], c = target < nums[lowIndex]，可以将 1 的情况归纳为
+ *      3.1 a、b、c 同时为真
+ *      3.2 a 为假，b 或 c 为真
+ *      3.3 综上所述，a ^ b ^ c
+ *
+ *  4. 同理，假设 a = nums[lowIndex] < nums[middleIndex], b = target >= nums[lowIndex], c = target < nums[middleIndex], 可以将 2 的情况归纳为
+ *      4.1 a、b、c 同时为真
+ *      4.2 a 为假，b 或 c 为真
+ *      4.3 综上所述，a ^ b ^ c
+ *
+ * 精简版
+ */
+const search = () => {
+    let lowIndex = 0,
+        highIndex = nums.length - 1;
+
+    while (lowIndex <= highIndex) {
+        const middleIndex = Math.ceil((lowIndex + highIndex) / 2);
+
+        if (Object.is(nums[middleIndex], target)) return middleIndex;
+
+        if ((nums[lowIndex] > nums[middleIndex]) ^ (target > nums[middleIndex]) ^ (target < nums[lowIndex])) {
+            lowIndex = middleIndex + 1;
+        } else {
+            highIndex = middleIndex - 1;
+        }
+
+        // if ((nums[lowIndex] < nums[middleIndex]) ^ (target >= nums[lowIndex]) ^ (target < nums[middleIndex])) {
+        //     highIndex = middleIndex - 1;
+        // } else {
+        //     lowIndex = middleIndex + 1;
+        // }
+    }
+
+    return -1;
+}
