@@ -1,6 +1,5 @@
 ### 进度
 
-- [x] [Go to parent directory](https://github.com/hexuanzhang/leecode)
 - [x] [10. Regular Expression Matching.js](https://github.com/hexuanzhang/leecode/blob/master/JavaScript/10.%20Regular%20Expression%20Matching.js)
 - [x] [11. Container With Most Water.js](https://github.com/hexuanzhang/leecode/blob/master/JavaScript/11.%20Container%20With%20Most%20Water.js)
 - [x] [12. Integer to Roman.js](https://github.com/hexuanzhang/leecode/blob/master/JavaScript/12.%20Integer%20to%20Roman.js)
