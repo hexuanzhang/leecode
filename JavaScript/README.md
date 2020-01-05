@@ -24,4 +24,5 @@
 - [x] [33. Search in Rotated Sorted Array.js](https://github.com/hexuanzhang/leecode/blob/master/JavaScript/33.%20Search%20in%20Rotated%20Sorted%20Array.js)
 - [x] [34. Find First and Last Position of Element in Sorted Array.js](https://github.com/hexuanzhang/leecode/blob/master/JavaScript/34.%20Find%20First%20and%20Last%20Position%20of%20Element%20in%20Sorted%20Array.js)
 - [ ] [35. Search Insert Position.js](https://github.com/hexuanzhang/leecode/blob/master/JavaScript/35.%20Search%20Insert%20Position.js)
+- [ ] [35. Search Insert Position.js](https://github.com/hexuanzhang/leecode/blob/master/JavaScript/35.%20Search%20Insert%20Position.js)
 - [x] [78. Subsets.js](https://github.com/hexuanzhang/leecode/blob/master/JavaScript/78.%20Subsets.js)
