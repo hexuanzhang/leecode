@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-12-11 17:57:20
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2019-12-11 18:17:48
+ * @Last Modified time: 2020-01-03 21:28:45
  */
 
 /**
@@ -12,5 +12,4 @@
  * @param {number} target
  * @return {number}
  */
-const searchInsert = (nums, target) => {
-};
+const searchInsert = (nums, target) => { };
