@@ -15,16 +15,16 @@
             <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/BubbleSort">双向冒泡排序</a></td>
       	</tr>
       	<tr>
-            <td><a href="">插入排序</a></td>
+            <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/InsertionSort">插入排序</a></td>
       	</tr>
         <tr>
-            <td><a href="">选择排序</a></td>
+            <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/SelectionSort">选择排序</a></td>
       	</tr>
     	<tr>
-            <td><a href="">希尔排序</a></td>
+            <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/ShellSort">希尔排序</a></td>
       	</tr>
     	<tr>
-            <td><a href="">堆排序</a></td>
+            <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/BucketSort">堆排序</a></td>
       	</tr>
     </table>
 
@@ -45,10 +45,10 @@
             <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/BubbleSort">双向冒泡排序</a></td>
       	</tr>
       	<tr>
-            <td><a href="">插入排序</a></td>
+            <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/InsertionSort">插入排序</a></td>
       	</tr>
         <tr>
-            <td><a href="">桶排序</a></td>
+            <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/BucketSort">桶排序</a></td>
       	</tr>
     	<tr>
             <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/CountSort">计数排序</a></td>
@@ -57,25 +57,19 @@
             <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/MergeSort">归并排序</a></td>
       	</tr>
     	<tr>
-            <td><a href="">基数排序</a></td>
-      	</tr>
-    	<tr>
-            <td><a href="">块排序</a></td>
+            <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/RadixSort">基数排序</a></td>
       	</tr>
         <tr>
         	<td rowspan="5">不稳定的排序算法</td>
       	</tr>
       	<tr>
-            <td><a href="">选择排序</a></td>
+            <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/SelectionSort">选择排序</a></td>
       	</tr>
       	<tr>
-            <td><a href="">希尔排序</a></td>
-      	</tr>
-    	<tr>
-            <td><a href="">堆排序</a></td>
+            <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/ShellSort">希尔排序</a></td>
       	</tr>
         <tr>
-            <td><a href="">快速排序</a></td>
+            <td><a href="https://github.com/hexuanzhang/leecode/tree/master/algorithm/javaScript/Sort/QuickSort">快速排序</a></td>
       	</tr>
     </table>
 
