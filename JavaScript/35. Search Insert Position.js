@@ -4,12 +4,24 @@
  * @Author: hexuan.zhang
  * @Date: 2019-12-11 17:57:20
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2020-01-03 21:28:45
+ * @Last Modified time: 2020-03-03 17:01:28
  */
 
 /**
+ *  思路：直接遍历整个数组，查找目标元素，如果未找到则进行插入操作
+ *
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
  */
-const searchInsert = (nums, target) => { };
+const searchInsert = (nums, target) => {
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] >= target) {
+            // 如果 nums[i] 大于 target, 则先将 target 插入到 i 的位置
+            return i;
+        } else if (Object.is(i, nums.length - 1)) {
+            // 数组内所有元素都小于 target，则将 target 插入到数组末尾
+            return nums.length;
+        }
+    }
+};
