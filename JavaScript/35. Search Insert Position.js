@@ -4,7 +4,7 @@
  * @Author: hexuan.zhang
  * @Date: 2019-12-11 17:57:20
  * @Last Modified by: hexuan.zhang
- * @Last Modified time: 2020-03-03 17:01:28
+ * @Last Modified time: 2020-03-04 15:00:33
  */
 
 /**
@@ -25,3 +25,25 @@ const searchInsert = (nums, target) => {
         }
     }
 };
+
+// 采用二分法进行查找
+const searchInsert2 = (nums, target) => {
+    let startIndex = 0,
+        endIndex = nums.length - 1;
+
+    // 判断数组是升序还是降序
+    const isAscend = nums[startIndex] <= nums[endIndex];
+
+    while (startIndex <= endIndex) {
+        const midIndex = ~~((startIndex + endIndex) / 2);
+        if (Object.is(nums[midIndex], target)) {
+            return midIndex;
+        } else if (nums[midIndex] < target) {
+            isAscend ? startIndex++ : endIndex--;
+        } else {
+            isAscend ? endIndex-- : startIndex++;
+        }
+    }
+
+    return startIndex;
+}
